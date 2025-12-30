@@ -283,17 +283,17 @@ nav ul li a.btn-primary:after {
 }
 
 .carousel-slide:nth-child(1) {
-    background-image: url('assets/images/rice_transport_1766897162147.png');
+    background-image: url('assets/images/image.png');
     animation-delay: 0s;
 }
 
 .carousel-slide:nth-child(2) {
-    background-image: url('assets/images/rice_mill_capacity_1766897132651.png');
+    background-image: url('assets/images/image-copy.png');
     animation-delay: 6s;
 }
 
 .carousel-slide:nth-child(3) {
-    background-image: url('assets/images/single_pass_mill_1766917893923.png');
+    background-image: url('assets/images/carousel3.png');
     animation-delay: 12s;
 }
 
@@ -364,7 +364,7 @@ nav ul li a.btn-primary:after {
 }
 
 .page-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/rice_transport_1766897162147.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/page-main.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
