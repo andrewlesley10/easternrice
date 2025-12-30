@@ -32,6 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Send to specific address
     $to = "info@easternrice.lk";
 
+
+
+
     $subject = "New contact form message from $name";
 
     $body  = "You have received a new message from the contact form on easternrice.lk.\n\n";
@@ -47,7 +50,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // For testing/demo purposes, we'll assume success mostly.
     // In production, check return of mail() function.
-    if (true) { // mail($to, $subject, $body, $headers)
+    // Attempt to send email
+    if (mail($to, $subject, $body, $headers)) {
         echo json_encode([
             'success' => true, 
             'message' => 'Thank you for your message! We have received your enquiry and will get back to you soon.'
