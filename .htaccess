@@ -1,0 +1,17 @@
+RewriteEngine On
+
+# Redirect /index.html to /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+index\.html [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Redirect .html to clean URL (external redirect)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.+)\.html [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+# Internally map clean URL to .html file
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
+
+# Handle index explicitly if needed (usually DirectoryIndex handles this)
+DirectoryIndex index.html index.php
