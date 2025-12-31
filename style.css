@@ -813,7 +813,48 @@ footer {
 
     nav {
         display: none;
-        /* Keep it simple for now */
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.98);
+        padding: 20px 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(10px);
+    }
+
+    nav.active {
+        display: block;
+        animation: slideDown 0.3s ease-out;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        margin: 0;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .mobile-menu-btn {

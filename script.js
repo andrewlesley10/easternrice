@@ -26,6 +26,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const fadeElements = document.querySelectorAll('.fade-in');
     fadeElements.forEach(el => observer.observe(el));
 
+    // Mobile Menu Toggle
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('nav');
+
+    if (menuBtn && nav) {
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            nav.classList.toggle('active');
+            
+            // Animate hamburger if desired (optional)
+            // menuBtn.classList.toggle('open'); 
+        });
+        
+        // Close menu when clicking a link
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuBtn.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+    }
+
     // Contact Form Handling
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
