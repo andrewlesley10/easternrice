@@ -315,17 +315,39 @@ nav ul li a.btn-primary:after {
     z-index: 3;
     /* Above overlay */
     max-width: 900px;
+    text-align: center;
 }
 
 .hero .subtitle {
     color: var(--primary-color);
     /* Make sure subtitle pops */
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 .hero .hero-text {
     color: #f0f0f0;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    line-height: 1.2;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.hero h1 .highlight {
+    background: linear-gradient(135deg, var(--primary-color), #ffd54f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.7));
 }
 
 @keyframes carouselFade {
@@ -356,6 +378,7 @@ nav ul li a.btn-primary:after {
     min-height: 90vh;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 /* Page Headers */
@@ -865,6 +888,12 @@ footer {
     .hero.full-height {
         min-height: auto;
         padding-bottom: 100px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+        white-space: normal;
+        line-height: 1.3;
     }
 }
 
