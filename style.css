@@ -9,7 +9,7 @@
     --dark-bg: #1A1A1A;
     --transition: all 0.3s ease;
     --font-main: 'Outfit', sans-serif;
-    --header-height: 100px;
+    --header-height: 180px;
     --top-bar-height: 40px;
 }
 
@@ -186,7 +186,7 @@ header {
 }
 
 .logo-container {
-    height: 120px;
+    height: 240px;
     display: flex;
     align-items: center;
 }
